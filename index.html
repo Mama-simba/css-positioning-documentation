@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Elements Position documentation</title>
+    <meta name="CSS positioning" content="Simple & easy tutorial about CSS positioning">
+    <link href="./src/styles.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8859f7b0c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-3 navigation">
+
+                <div class="fixed-top mt-5 nav-box">
+                    <ul>
+                        <a href="#introduction"><li>Introduction</li></a>
+                        <a href="#positioning-properties"><li>CSS positioning properties</li></a>
+                        <a href="#position"><li>Position</li></a>
+                        <a href="#display"><li>Display</li></a>
+                        <a href="#z-index"><li>Z-Index</li></a>
+                        <a href="#float"><li>Float</li></a>
+                        <a href="#clear"><li>Clear</li></a>
+                        <a href="#flex"><li>Flex-box</li></a>
+                        <a href="#grid"><li>Grid</li></a>
+                        <a href="#resources"><li>Useful resources</li></a>
+                    </ul>
+                </div>
+                
+            </div>
+
+
+            <div class="col-9 documentation">
+
+                
+                <h1 class="main-title text-center"><i class="fab fa-css3-alt"></i> CSS ELEMENTS POSITION <i class="fab fa-css3-alt"></i></h1>
+
+
+                <section id="introduction">
+                    <h1>Introduction</h1>
+                    <p>There are many ways to position elements with CSS. Just by adjusting the margin values, for example, we can move an
+                        element on the website.</p>
+                    <p>The browser interprets the HTML flow from left to right and from top to bottom. Therefore, it is very important to
+                        understand first which HTML elements follow an inline flow and which ones are positioned as a block.</p>
+
+                    <h3>Inline Elements</h3>
+                    <p>This kind of elements get positioned along a line like below:</p>
+                    <img class="inline-elements" src="./src/images/inline.png" alt="HTML inline elements" />
+                    <p>Some Inline Elements examples are: <em class="text-primary">span, a, img, strong, em, button, input, label, select, textarea, etc.</em></p>
+                    
+
+                    <h3 class="pt-2">Block Elements</h3>    
+                    <p>This kind of elements always start on a new line:</p>
+                    <img class="block-elements" src="./src/images/block.png" alt="HTML block elements" />
+                    <p class="pt-3">Some Block Elements examples are: <em class="text-success">div, header, nav, section, article, aside, main, footer, audio, video, figure, figcaption, form,
+                            table, ul, ol, li, p, hr, headings (h1-h6), etc.</em></p>
+                </section>
+
+                <hr>
+
+                <section id="positioning-properties">
+                    <h1>CSS positioning properties</h1>
+                    <p>In order to modify the HTML flow, we can use the following CSS properties:</p>
+
+                        <table class="properties">
+                            <tr class="style">
+                                <th class="style" scope="col">Position</th>
+                                <td class="style" scope="col">static, relative, absolute, fixed and sticky</td>
+                            </tr>
+                            <tr class="style">
+                                <th class="style" scope="col">Display</th>
+                                <td class="style" scope="col">inline, block, inline-block</td>
+                            </tr>
+                            <tr class="style">
+                                <th class="style" scope="col">Z-Index</th>
+                                <td class="style" scope="col">plays with overlapping</td>
+                            </tr>
+
+                            <tr class="style">
+                                <th class="style" scope="col">Float</th>
+                                <td class="style" scope="col">moves elements to the left or to the right</td>
+                            </tr>
+                            <tr class="style">
+                                <th class="style" scope="col">Clear</th>
+                                <td class="style" scope="col">avoids that floating elements crash</td>
+                            </tr>
+                            <tr class="style">
+                                <th class="style" scope="col">Flex-box</th>
+                                <td class="style" scope="col">aligns elements horizontal or vertically (1 dimension)</td>
+                            </tr>
+                            <tr>
+                                <th class="style" scope="col">Grid</th>
+                                <td class="style" scope="col">aligns elements horizontal or vertically (2 dimension)</td>
+                            </tr>
+                        </table> 
+                </section>
+
+                <hr>
+
+                <section id="position">
+
+                    <h1>Position</h1>
+                    <p>It allows to modify the flow of the HTML elements, taking the X and Y axis as reference.</p>
+                    
+                    <h3>Static</h3>
+                    <p>It is the default value of an element.</p>
+                    
+                    <h3>Relative</h3>
+                    <p>It acts exactly like the static position if we don't specify any top, right, bottom and left values.</p>
+                    <img class="static" src="./src/images/relative1.png" alt="Blocks" />
+                    <p class="pt-3">Let's apply a relative position to the red box.</p>
+                    <img class="relative-code" src="./src/images/relative_code.png" alt="Relative position code" />
+                    <p class="pt-3">Once we use relative in combination with top, the red box will move down while the green box will stay in the same
+                        position. Despite the red box has a relative position, the original position won't be replaced.</p>
+                    <img class="relative" src="./src/images/relative2.png" alt="Relative position example" />
+                    
+                    <h3>Absolute</h3>
+                    <p>An element with this property will ignore the whole HTML flow and it will be also ignored by the rest of the
+                        elements, except if it is positioned within a parent container and this has a relative position.</p>
+                    <img class="absolute-code" src="./src/images/absolute_code.png" alt="Absolute position code" />
+                    <p>In this case, if we set the red box in a relative position, the rest of the elements will also move up, breaking the
+                        flow.</p>
+                    <img class="absolute" src="./src/images/absolute.png" alt="Absolute position example" />
+                    
+                    
+                    <h3>Fixed</h3>
+                    <p>This position keeps an element completely fixed and it won't move although we scroll down. It is very useful to
+                        create navigation bars, like in the example below.</p>
+                    <video controls>
+                        <source src="./src/video/fixed.mp4" type="video/mp4">
+                    </video>
+                    
+                    <h3>Sticky</h3>
+                    <p>Sticky positioning combines relative and fixed. The element is treated as relative positioned but when it crosses
+                        another element, it will be treated as fixed positioned.</p>
+                    <img class="sticky-gif" src="./src/images/sitcky.gif" alt="Sticky example" />
+                    <p class="pt-5">If you would like to see all position examples, don't miss out the next video:</p>
+                    <iframe src="https://www.youtube.com/embed/gD3G67oPg-w" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </section>
+
+
+                <hr>
+                
+                <section id="display">
+                    <h1>Display</h1>
+                    <p>Display the elements horizontal or vertically. It has the following 3 properties:</p>
+                    
+                    <h3>Inline</h3>
+                    <p>It positions block elements inline but <strong>it won't respect the width and height set</strong>.</p>
+                    <img class="display-inline" src="./src/images/display_inline.png" alt="Display Inline example" />
+                    
+                    <h3 class="pt-4">Block</h3>
+                    <p>It positions inline elements as blocks.</p>
+                    <img class="display-block" src="./src/images/display_block.png" alt="Display Block example" />
+                    
+                    <h3 class="pt-4">Inline-Block</h3>
+                    <p>It works the same as inline but <strong>it respects the width and height we set</stron>.</p>
+                    <img class="inline-block" src="./src/images/display_inline_block.png" alt="Display Inline Block example" />
+                </section>
+
+                <hr>
+
+                <section id="z-index">
+                    <h1>Z-Index</h1>
+                    <p>It works taking the Z axis (the depth) into consideration. This property allows to play with overlapping. The
+                        element with the highest value will be displayed above the other elements.</p>
+                    <p>Z-Index doesn't work with static elements. All elements need to be positioned.</p>
+                    <img class="index" src="./src/images/z_index.png" alt="Z-Index example" />
+                </section>
+
+                <hr>
+                
+                <section id="float">
+                    <h1>Float</h1>
+                    <p>This property moves elements to the left or to the right. It only works with elements positioned as static or
+                            relative that also have a width declared.</p>
+                    <img class="float" src="./src/images/float.png" alt="Float example" />
+                </section>
+
+                <hr>
+                
+                <section id="clear">
+                    <h1>Clear</h1>
+                    <p>This property is used together with <em>float</em>, and it controlls floar's behaviour. It avoids that floating
+                        elements collapse.</p>
+                    <img class="clear" src="./src/images/clear.png" alt="Clear example" />
+                    <p>The clear values are left, right, both and none.</p>
+                </section>
+
+                <hr>
+                
+                <section id="flex">
+                    <h1>Flex-Box</h1>
+                    <p>The Flexible Box Layout can position multiple elements within a container horizontal or vertically. By default,
+                        this property positions the elements inline.</p>
+                    <img class="flex" src="./src/images/flex.png" alt="Flex position example" />
+                    <p>Do not mistake it with the display positioning.</p>
+                    <img class="flex-code" src="./src/images/flex_code.png" alt="Flex position code" />
+                    <p>This layout has many different properties, which can be applied to the flex container but also to the flex items.</p>
+
+                    <table class="flex-properties">
+                        <tr class="style">
+                            <th class="style table-head" scope="col">Flex container properties</th>
+                            <th class="style table-head" scope="col">Flex items properties</th> 
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">justify-content</td>
+                            <td class="style" scope="col">flex-grow</td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">align-items</td>
+                            <td class="style" scope="col">flex-shrink</td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">flex-wrap</td>
+                            <td class="style" scope="col">flex-basis</td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">flex-direction</td>
+                            <td class="style" scope="col">flex</td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">align-content</td>
+                            <td class="style" scope="col">order</td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">flex-flow</td>
+                            <td class="style" scope="col">align-self</td>
+                        </tr>
+                    </table>
+
+                    <p class="pt-5">If you would like to learn how to combine the flex properties, don't miss out the next video:</p>
+                    <iframe src="https://www.youtube.com/embed/fqNPSSoMO9Y" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p>If you would like to practice the flex properties, check <a class="games-links" href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a>.</p>
+                </section>  
+                
+                <hr>
+                
+                <section id="grid">
+                    <h1>Grid</h1>
+                    <p>The Grid is similar to the Flexible Box Layout. We can position multiple elements within a container specifying
+                        the number of columns and rows. By default, this property positions the elements as a column. There is a new
+                        unit called <em>fraction</em> (fr) that we can use with a grid.</p>
+                    <p>In order to start, we need to create a grid container that contains other elements (rows and columns) To do so,
+                        we can use the following properties:</p>
+                    <img class="grid-code1" src="./src/images/grid_template_columns_rows_code.png" alt="Grid template columns and rows code" />
+                    
+                    <p>The grid-template-colums or rows define the number of columns and rows we want and their size. In this case, 1
+                        column of 100px, 1 column of 200px, 1 row of 100px 1 row of 200px 1 row of 100px and 1 row of 200px.</p>
+                    <p>If we want to simplify the code, we can simply use <em>repeat</em> or a grid-template</p>
+                    <img class="grid-code2" src="./src/images/repeat_code.png" alt="Repeat code" />
+
+                    <p>In this example, <em>repeat</em> defines 3 columns of 100px each.</p>
+                    <img class="grid-code3" src="./src/images/grid_template_code.png" alt="Grid template code" />
+                    <p>The grid-template combines the row and columns together (in this order) Therefore, we will create a grid with 1
+                        row of 100px and 1 column of 200px.</p>
+                    <p>What about adding some space between rows and columns? Let's use the grid-row-gap, grid-column-gap or the
+                        combination of both (grid-gap)</p>
+                    <img class="grid-code4" src="./src/images/grid-gap.png" alt="Grid gap code" />
+                
+                    <p>We can also expand rows and columns in two different ways:</p>
+                    <img class="grid-code5" src="./src/images/grid_span.png" alt="Grid span code" />
+                    
+                    <p>And, as usual, we can also simplify the above code with the <em>grid-area</em> specifying the row start / column
+                        start / row end / column end:</p>
+                    <img class="grid-code6" src="./src/images/grid_area.png" alt="Grid area code" />
+                    <p>Some other properties that we can declare within the grid container or the grid items are:</p>
+
+                    <table class="flex-properties">
+                        <tr class="style">
+                            <th class="style table-head" scope="col">Grid container properties</th>
+                            <th class="style table-head" scope="col">Grid items properties</th>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">justify-items</td>
+                            <td class="style" scope="col">justify-self</td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">align-items</td>
+                            <td class="style" scope="col">align-self</td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">justify-content</td>
+                            <td class="style" scope="col"></td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">align-content</td>
+                            <td class="style" scope="col"></td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">grid-auto-rows & grid-auto-columns</td>
+                            <td class="style" scope="col"></td>
+                        </tr>
+                        <tr class="style">
+                            <td class="style" scope="col">grid-auto-flow</td>
+                            <td class="style" scope="col"></td>
+                        </tr>
+                    </table>
+
+                    <p class="pt-5">Watch out the next video to learn about the grid properties:</p>
+                    <iframe src="https://www.youtube.com/embed/9zBsdzdE4sM" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    
+                    <p>If you would like to practice the grid properties, check <a class="games-links" href="https://codepip.com/games/grid-garden/" target="_blank">Grid
+                            Garden</a>.</p>
+                    </section>
+
+
+                    <hr>
+                    
+                    <section id="resources" class="resources">
+                        <h1>Useful Resources</h1>
+                        <ul>
+                            <a href="https://flexboxfroggy.com/" target="_blank"><li>Flexbox Froggy (FREE)</li></a>
+                            <a href="https://codepip.com/games/grid-garden/" target="_blank"><li>Grid Garden (FREE)</li></a>
+                            <a href="https://www.codeanalogies.com/csssundae/" target="_blank"><li>Ice Cream Sundae (FREE)</li></a>
+                            <a href="https://flexbox.malven.co/" target="_blank"><li>Flexbox Cheatsheet</li></a>
+                            <a href="https://grid.malven.co/" target="_blank"><li>Grid Cheatsheet</li></a>
+                            <a href="https://htmlcheatsheet.com/css/" target="_blank">
+                                <li>CSS Cheatsheet</li>
+                            </a>
+                              
+                        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <footer class="text-end">
+                        <p >© Coded by <a href="https://cristina-padilla-codes.netlify.app/" target="_blank"><strong>Cristina
+                                    Padilla</strong></a>
+                            <a href="#"><i class="fab fa-github-square"></i></a>
+                            <a href="https://www.linkedin.com/in/cristina-padilla-plasencia/"><i class="fab fa-linkedin"></i></a>
+                        </p>
+                    </footer>
+                    
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+   
+    
+
+
+
+</html>

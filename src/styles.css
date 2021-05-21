@@ -1,0 +1,294 @@
+
+
+body {
+    font-family: 'Comfortaa', cursive !important;
+    color:#444444 !important;
+}
+
+
+
+.main-title {
+    padding: 50px 0 0 0;
+    color: #14aabf;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+
+}
+
+section {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 15px 5px 10px;
+}
+
+
+h1 {
+    padding: 20px 0;
+    color: #444444;
+}
+
+h3 {
+    padding: 10px 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.games-links {
+    text-decoration: none;
+    color: #14aabf;
+}
+
+.games-links:hover {
+    text-shadow: 2px 2px 2px #444444;
+}
+
+
+
+/* NAVIGATION */
+
+.navigation{
+    background-color: #f5f5f5;
+}
+
+.nav-box {
+    width: 25%;
+}
+
+.nav-box ul {
+    list-style: none;   
+    padding: 0;
+}
+
+.nav-box ul li {
+    padding: 15px 0 15px 20px;
+}
+
+.nav-box a {
+    text-decoration: none;
+    display: block;    
+    background-color: #14aabf;
+    border: 1px solid whitesmoke;
+    transition: 1s; 
+    color: white;
+}
+
+
+.nav-box a:hover {
+    color: #444444;         
+    transform: scale(1.1);
+
+}
+
+
+/* INTRODUCTION */
+
+.inline-elements {
+    display: block;
+    width: 57%;
+    height: auto;
+}
+
+.block-elements {
+    display: block;
+    width: 30%;
+    height: auto;
+}
+
+
+
+/* CSS PROPERTIES */
+
+.properties {      
+    width: 60%;
+    border: 1px dashed #444444;
+    border-spacing: 0;
+    background-color:lightblue;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+    text-align: justify;
+    padding: 10px;   
+}
+
+.style {
+    border: 1px dashed #444444;
+}
+
+/* POSITION */
+
+.static,
+.relative {
+    display: block;
+    width: 15%;
+}
+
+.relative {
+    margin-bottom: 15px;
+}
+
+.relative-code,
+.absolute-code {
+    display: block;
+    width: 20%;
+}
+
+.absolute {
+    display: block;
+    width: 25%;
+    margin-bottom: 15px;
+}
+
+video {
+    width: 60%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.sticky-gif {
+    width: 60%;
+    height: auto;
+}
+
+iframe {
+    width: 60%;
+    height: 315px;
+    margin-bottom: 20px;
+}
+
+/* DISPLAY */
+
+.display-inline {
+    display: block;
+    width: 40%;
+    height: auto;
+}
+
+.display-block {
+    display: block;
+    width: 20%;
+    height: auto;
+}
+
+.inline-block {
+    display: block;
+    width: 35%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Z-INDEX & FLOAT & CLEAR */
+
+.index,
+.float,
+.clear {
+    display: block;
+    width: 75%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* FLEX */
+
+.flex {
+    display: block;
+    width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.flex-code {
+    display: block;
+    width: 20%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.table-head{
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+/* GRID */
+
+.grid-code1,
+.grid-code2 {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.grid-code3,
+.grid-code6 {
+    display: block;
+    width: 35%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.grid-code4 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.grid-code5 {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+
+/* RESOURCES */
+
+.resources ul {
+    list-style: circle;
+}
+
+.resources ul a {
+    text-decoration: none;
+    line-height: 3;
+    color: #14aabf;
+}
+
+.resources ul a:hover {
+    color: #444444;
+
+
+}
+
+
+
+
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: lightslategrey;
+    padding: 20px 30px 5px 0;
+}
+
+
+
+
+footer a {
+    text-decoration: none;  
+    color: #14aabf;
+}
+
+footer a:hover{
+    
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+}
