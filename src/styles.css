@@ -94,7 +94,9 @@ hr {
 
 .documentation {
     padding: 0 4rem;
+    padding-bottom: 40px;
 }
+    
 
 
 
@@ -168,21 +170,30 @@ iframe {
 
 /* FOOTER */
 
-.footer {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    color: lightslategrey;
-    padding: 20px 30px 5px 0;  
+.footer-row {
+    background-color: #14aabf;
+    
+    
 }
 
 
+.footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: white;
+    padding: 20px 30px 5px 0; 
+    font-weight: 200;
+}
+
 .footer a {
     text-decoration: none;  
-    color: #14aabf;
+    color: white;
 }
 
 .footer a:hover{
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+    color: black;
+    font-weight: bold;
 }
 
 
@@ -233,6 +244,10 @@ iframe {
       font-size: 22px;
     }
 
+    .resources {
+        padding-bottom: 100px;
+    }
+
     p,
     span,
     .footer a {
@@ -255,7 +270,7 @@ iframe {
     height: 350px;
 
     }
-
+}
     
 
 @media only screen and (max-width: 414px) {
@@ -266,6 +281,6 @@ iframe {
 
     }
 
-
+}
 
 
