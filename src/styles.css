@@ -126,9 +126,13 @@ video {
 }
 
 
+
+
  .ytp-cued-thumbnail-overlay-image {
-     width: 100%;
-     height: auto;
+     max-width: 100%!important;
+     height: auto!important;
+     
+    
  }
 
 
@@ -215,6 +219,7 @@ video {
         width: 100%;
         position: relative;
         top: 5rem;
+        padding: 0 1rem;
     }
 
     h1 {
@@ -244,8 +249,16 @@ video {
         
     font-size: 12px;
 }
+
+
+
     }
 
     
+
+
+
+
+
 
 
